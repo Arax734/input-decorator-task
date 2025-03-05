@@ -1,59 +1,44 @@
-# InputDecoratorTask
+# Zadanie: Lista uczniów z wyróżnieniami
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+## Cel zadania
 
-## Development server
+Twoim zadaniem jest stworzenie aplikacji Angular, która wyświetli listę uczniów wraz z ich ocenami. Wykorzystasz do tego dyrektywy `*ngFor`, `*ngIf` oraz dekorator `@Input`.
 
-To start a local development server, run:
+## Wymagania
 
-```bash
-ng serve
-```
+1. **Utwórz nowy projekt Angular**
+   ```sh
+   ng new StudentApp
+   cd StudentApp
+   ng generate component StudentList
+   ng generate component StudentCard
+   ```
+2. **Zaimplementuj komponent `StudentListComponent`**, który:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+   - Będzie zawierał tablicę uczniów z ich ocenami.
+   - Użyje `*ngFor`, aby wyświetlić listę uczniów.
+   - Przekaże dane ucznia do komponentu `StudentCardComponent` za pomocą `@Input`.
 
-## Code scaffolding
+3. **Zaimplementuj komponent `StudentCardComponent`**, który:
+   - Otrzyma dane ucznia poprzez `@Input`.
+   - Obliczy średnią ocen ucznia.
+   - Użyje `*ngIf`, aby dodać etykietę "🏆 Wyróżniony uczeń!", jeśli średnia ocen przekracza `4.5`.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Struktura komponentów
 
-```bash
-ng generate component component-name
-```
+### StudentListComponent
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Przechowuje tablicę uczniów.
+- Iteruje po uczniach za pomocą `*ngFor` i wyświetla komponent `StudentCardComponent` dla każdego ucznia.
 
-```bash
-ng generate --help
-```
+### StudentCardComponent
 
-## Building
+- Przyjmuje dane ucznia poprzez `@Input`.
+- Oblicza i wyświetla średnią ocen.
+- Używa `*ngIf`, aby dodać wyróżnienie dla uczniów ze średnią ocen powyżej `4.5`.
 
-To build the project run:
+## Zadania do wykonania
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Dodaj brakujące dyrektywy `*ngFor`, `*ngIf` oraz dekorator `@Input`** w odpowiednich miejscach w kodzie.
+2. **Zaimplementuj obliczanie średniej ocen ucznia** w `StudentCardComponent`.
+3. **Dostosuj wygląd aplikacji**, np. zmień kolor dla wyróżnionych uczniów.

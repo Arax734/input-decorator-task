@@ -1,0 +1,15 @@
+.student-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.highlight {
+  background-color: #dff0d8;
+  border-left: 5px solid #4caf50;
+}
+.honored {
+  font-weight: bold;
+  color: #4caf50;
+}
