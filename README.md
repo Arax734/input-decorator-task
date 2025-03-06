@@ -6,20 +6,13 @@ Twoim zadaniem jest stworzenie aplikacji Angular, która wyświetli listę uczni
 
 ## Wymagania
 
-1. **Utwórz nowy projekt Angular**
-   ```sh
-   ng new StudentApp
-   cd StudentApp
-   ng generate component StudentList
-   ng generate component StudentCard
-   ```
-2. **Zaimplementuj komponent `StudentListComponent`**, który:
+1. **Zaimplementuj komponent `StudentListComponent`**, który:
 
    - Będzie zawierał tablicę uczniów z ich ocenami.
    - Użyje `*ngFor`, aby wyświetlić listę uczniów.
    - Przekaże dane ucznia do komponentu `StudentCardComponent` za pomocą `@Input`.
 
-3. **Zaimplementuj komponent `StudentCardComponent`**, który:
+2. **Zaimplementuj komponent `StudentCardComponent`**, który:
    - Otrzyma dane ucznia poprzez `@Input`.
    - Obliczy średnią ocen ucznia.
    - Użyje `*ngIf`, aby dodać etykietę "🏆 Wyróżniony uczeń!", jeśli średnia ocen przekracza `4.5`.
